@@ -223,4 +223,8 @@ class PagingController<PageKeyType, ItemType>
     _pageRequestListeners = null;
     super.dispose();
   }
+
+  bool isDisposed() {
+    return _pageRequestListeners == null || _statusListeners == null;
+  }
 }
